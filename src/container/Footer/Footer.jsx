@@ -20,21 +20,25 @@ const Footer = () => {
     }
 
     const handleSumbit = () => {
-        setLoading(true)
+        setLoading(true);
 
         const contact = {
-            _type: 'document',
+            _type: 'contact',
             name: name,
             email: email,
             message: message
-        }
+        };
 
         client.create(contact)
             .then(() => {
-                setLoading(false)
-                setIsFormSubmitted(true)
+                setLoading(false);
+                setIsFormSubmitted(true);
             })
-    }
+            .catch((error) => {
+                console.error("Failed to submit the form:", error);
+                setLoading(false);
+            });
+    };
 
     return (
         <>

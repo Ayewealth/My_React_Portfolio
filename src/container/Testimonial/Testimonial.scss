@@ -52,11 +52,27 @@
   justify-content: space-around;
   align-items: flex-start;
 
+  @media screen and (min-width: 323px) and (max-width: 376px) {
+    padding: 0 0rem;
+  }
+
+  @media screen and (min-width: 377px) and (max-width: 426px) {
+    padding: 0 1rem;
+  }
+
   p {
     font-size: 1.25rem;
     line-height: 2rem;
     color: var(--black-color);
     font-family: var(--font-base);
+
+    @media screen and (min-width: 323px) and (max-width: 376px) {
+      font-size: 0.9rem;
+    }
+
+    @media screen and (min-width: 377px) and (max-width: 426px) {
+      font-size: 1rem;
+    }
   }
 
   h4 {
